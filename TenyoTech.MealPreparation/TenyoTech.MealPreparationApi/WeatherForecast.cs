@@ -1,6 +1,6 @@
 using System;
 
-namespace TenyoTech.MealPreparation.Api
+namespace TenyoTech.MealPreparationApi
 {
     public class WeatherForecast
     {

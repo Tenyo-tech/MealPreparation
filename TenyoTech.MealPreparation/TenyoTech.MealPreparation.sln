@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenyoTech.MealPreparation.Api", "TenyoTech.MealPreparation.Api\TenyoTech.MealPreparation.Api.csproj", "{1EEF156C-FC1C-4F5D-93C8-5F491F902116}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenyoTech.MealPreparationApi", "TenyoTech.MealPreparationApi\TenyoTech.MealPreparationApi.csproj", "{A27ACBB0-B874-4128-9E19-FCFC4D172BCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1EEF156C-FC1C-4F5D-93C8-5F491F902116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EEF156C-FC1C-4F5D-93C8-5F491F902116}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EEF156C-FC1C-4F5D-93C8-5F491F902116}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1EEF156C-FC1C-4F5D-93C8-5F491F902116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27ACBB0-B874-4128-9E19-FCFC4D172BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27ACBB0-B874-4128-9E19-FCFC4D172BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27ACBB0-B874-4128-9E19-FCFC4D172BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27ACBB0-B874-4128-9E19-FCFC4D172BCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {ECF48D49-AA88-4123-B69D-63B349542A38}
+		SolutionGuid = {023BD921-547B-47DE-816E-C1063EEDACCF}
 	EndGlobalSection
 EndGlobal
