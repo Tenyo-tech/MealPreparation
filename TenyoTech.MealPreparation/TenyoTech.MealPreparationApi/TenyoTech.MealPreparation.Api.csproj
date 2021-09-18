@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="10.1.1" />
+	  <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TenyoTech.MealPreparation.Import.Models\TenyoTech.MealPreparation.Import.Models.csproj" />
+		<ProjectReference Include="..\TenyoTech.MealPreparation.Read.Models\TenyoTech.MealPreparation.ReadDTOs.Models.csproj" />
+		<ProjectReference Include="..\TenyoTech.MealPreparation\TenyoTech.MealPreparation.csproj" />
+	</ItemGroup>
+</Project>
