@@ -1,3 +1,5 @@
+using MediatR;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -5,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using MongoDB.Driver;
+
+using TenyoTech.MealPreparation.MediatR;
 
 namespace TenyoTech.MealPreparationApi
 {
@@ -27,6 +31,10 @@ namespace TenyoTech.MealPreparationApi
                 var mongoUri = s.GetRequiredService<IConfiguration>()["MongoUri"];
                 return new MongoClient(mongoUri);
             });
+
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddMediatR(typeof(EntryPoint).Assembly);
 
             services.AddSwaggerGen();
 

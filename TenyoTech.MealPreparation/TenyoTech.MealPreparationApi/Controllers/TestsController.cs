@@ -30,6 +30,12 @@ namespace TenyoTech.MealPreparation.Api.Controllers
         {
             var command = mapper.Map<commands.tests.Create.Command>(create);
 
+            //var command = new commands.tests.Create.Command
+            //{
+            //    TestName = create.TestName,
+            //    TestNumber = create.TestNumber
+            //};
+
             var result = await mediator.Send(command, cancellationToken);
 
             var response = mapper.Map<Read>(result.Test);

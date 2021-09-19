@@ -1,8 +1,9 @@
-﻿using TenyoTech.MealPreparation.Data.Models;
-
-namespace TenyoTech.MealPreparation.Import.Models.tests
+﻿namespace TenyoTech.MealPreparation.Import.Models.tests
 {
-    public class Create : Test
+    public class Create
     {
+        public string TestName { get; set; }
+
+        public int TestNumber { get; set; }
     }
 }
