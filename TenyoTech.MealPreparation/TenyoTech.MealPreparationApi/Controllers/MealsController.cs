@@ -36,5 +36,17 @@ namespace TenyoTech.MealPreparation.Api.Controllers
 
             return response;
         }
+
+        [HttpGet]
+        public async Task<ActionResult<ReadMeal>> GetMeal(string id, CancellationToken cancellationToken)
+        {
+            var command = new commands.Meals.Create.Command { Id = id };
+
+            var result = await mediator.Send(command, cancellationToken);
+
+            var response = mapper.Map<ReadMeal>(result.Meal);
+
+            return response;
+        }
     }
 }

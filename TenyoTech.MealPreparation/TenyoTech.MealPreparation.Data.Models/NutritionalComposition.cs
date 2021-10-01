@@ -2,6 +2,8 @@
 {
     public class NutritionalComposition
     {
+        public int Grams { get; set; }
+
         public int Calories { get; set; }
 
         public int Protein { get; set; }
