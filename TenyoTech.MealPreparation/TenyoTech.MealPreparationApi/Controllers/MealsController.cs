@@ -4,6 +4,7 @@ using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
 
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -45,6 +46,17 @@ namespace TenyoTech.MealPreparation.Api.Controllers
             var result = await mediator.Send(command, cancellationToken);
 
             var response = mapper.Map<ReadMeal>(result.Meal);
+
+            return response;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<ICollection<ReadMeal>>> GetRecentMeals(CancellationToken cancellationToken)
+        {
+            var command = new commands.Meals.GetRecent.Command();
+            var result = await mediator.Send(command, cancellationToken);
+
+            var response = mapper.Map<ReadMeal>(result);
 
             return response;
         }

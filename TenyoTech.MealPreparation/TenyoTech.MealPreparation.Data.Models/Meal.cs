@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 using Newtonsoft.Json;
 
+using System;
 using System.Collections.Generic;
 
 namespace TenyoTech.MealPreparation.Data.Models
@@ -24,5 +25,7 @@ namespace TenyoTech.MealPreparation.Data.Models
         public string Recipe { get; set; }
 
         public NutritionalComposition NutritionalComposition { get; set; }
+
+        public DateTime CreatedDate { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 
 using MongoDB.Driver;
 
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,7 +28,8 @@ namespace TenyoTech.MealPreparation.commands.Meals.Create
                 Title = request.Title,
                 Products = request.Products,
                 Recipe = request.Recipe,
-                NutritionalComposition = request.NutritionalComposition
+                NutritionalComposition = request.NutritionalComposition,
+                CreatedDate = DateTime.UtcNow
             };
 
             await mealsMongoCollection.InsertOneAsync(meal);

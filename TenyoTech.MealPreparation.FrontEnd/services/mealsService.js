@@ -1,6 +1,6 @@
 import { jsonRequest } from "../helpers/jsonRequest.js";
 
-
+//let baseUrl = 'http://localhost:3030/data/games';
 let baseUrl = 'http://localhost:3030/data/games';
 
 async function getAll(){
@@ -29,6 +29,11 @@ async function getAllGames(){
 }
 
 async function getRecentGames(){
+    let result = await jsonRequest(`${baseUrl}?sortBy=_createdOn%20desc&distinct=category`);
+    return result;
+}
+
+async function getRecentMeals(){
     let result = await jsonRequest(`${baseUrl}?sortBy=_createdOn%20desc&distinct=category`);
     return result;
 }
