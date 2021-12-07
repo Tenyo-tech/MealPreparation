@@ -8,9 +8,7 @@ namespace TenyoTech.MealPreparation.commands.Meals.Create
 {
     public class Command : IRequest<Response>
     {
-        public string Id { get; set; }
-
-        public Author Author { get; set; }
+        public string AuthorId { get; set; }
 
         public string Title { get; set; }
 

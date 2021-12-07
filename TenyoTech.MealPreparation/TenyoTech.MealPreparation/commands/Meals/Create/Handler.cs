@@ -24,13 +24,15 @@ namespace TenyoTech.MealPreparation.commands.Meals.Create
         {
             var meal = new Meal()
             {
-                Author = request.Author,
+                AuthorId = request.AuthorId,
                 Title = request.Title,
                 Products = request.Products,
                 Recipe = request.Recipe,
                 NutritionalComposition = request.NutritionalComposition,
                 CreatedDate = DateTime.UtcNow
             };
+            //TODO ADD MAPPER
+            //var meal2 = mapper.Map<Meal>(request);
 
             await mealsMongoCollection.InsertOneAsync(meal);
 

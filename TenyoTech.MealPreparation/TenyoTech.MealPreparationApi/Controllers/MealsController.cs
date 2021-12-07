@@ -4,7 +4,6 @@ using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
 
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -29,19 +28,25 @@ namespace TenyoTech.MealPreparation.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<ReadMeal>> CreateMeal(CreateMeal create, CancellationToken cancellationToken)
         {
-            var command = mapper.Map<commands.Meals.Create.Command>(create);
+            //TODO FIX MAPPER
+            // var command = mapper.Map<commands.Meals.Create.Command>(create);
+            var command = new commands.Meals.Create.Command
+            {
+                AuthorId = create.AuthorId,
+                Title = create.Title,
+            };
 
             var result = await mediator.Send(command, cancellationToken);
 
-            var response = mapper.Map<ReadMeal>(result.Meal);
-
-            return response;
+            //var response = mapper.Map<ReadMeal>(result.Meal);
+            var resposne2 = new ReadMeal();
+            return resposne2;
         }
 
         [HttpGet]
         public async Task<ActionResult<ReadMeal>> GetMeal(string id, CancellationToken cancellationToken)
         {
-            var command = new commands.Meals.Create.Command { Id = id };
+            var command = new commands.Meals.Get.Command { Id = id };
 
             var result = await mediator.Send(command, cancellationToken);
 
@@ -50,15 +55,15 @@ namespace TenyoTech.MealPreparation.Api.Controllers
             return response;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<ICollection<ReadMeal>>> GetRecentMeals(CancellationToken cancellationToken)
-        {
-            var command = new commands.Meals.GetRecent.Command();
-            var result = await mediator.Send(command, cancellationToken);
+        //[HttpGet]
+        //public async Task<ActionResult<ICollection<ReadMeal>>> GetRecentMeals(CancellationToken cancellationToken)
+        //{
+        //    var command = new commands.Meals.GetRecent.Command();
+        //    var result = await mediator.Send(command, cancellationToken);
 
-            var response = mapper.Map<ReadMeal>(result);
+        //    var response = mapper.Map<ReadMeal>(result);
 
-            return response;
-        }
+        //    return response;
+        //}
     }
 }

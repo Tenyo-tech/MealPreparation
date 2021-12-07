@@ -1,33 +1,25 @@
-﻿using MediatR;
-
-using MongoDB.Driver;
-
-using System.Threading;
-using System.Threading.Tasks;
-
-using TenyoTech.MealPreparation.Data.Models;
-
-namespace TenyoTech.MealPreparation.commands.Meals.GetRecent
+﻿namespace TenyoTech.MealPreparation.commands.Meals.GetRecent
 {
-    public class Handler : IRequestHandler<Command, Response>
+    public class Handler //: IRequestHandler<Command, Response>
     {
-        private IMongoCollection<Meal> mealsMongoCollection;
+        //    private IMongoCollection<Meal> mealsMongoCollection;
 
-        public Handler(IMongoClient mongoClient)
-        {
-            var dataBase = mongoClient.GetDatabase("TenyoTech");
-            mealsMongoCollection = dataBase.GetCollection<Meal>("Meals");
-        }
+        //    public Handler(IMongoClient mongoClient)
+        //    {
+        //        var dataBase = mongoClient.GetDatabase("TenyoTech");
+        //        mealsMongoCollection = dataBase.GetCollection<Meal>("Meals");
+        //    }
 
-        public Task<Response> Handle(Command request, CancellationToken cancellationToken)
-        {
-            //var filter = Builders<Meal>.Filter.Eq();
+        //    public Task<Response> Handle(Command request, CancellationToken cancellationToken)
+        //    {
+        //        var filter = Builders<Meal>.Filter.Eq();
 
-            //var meal = await mealsMongoCollection.Aggregate()
-            //        .Match(filter)
-            //        .FirstOrDefaultAsync(cancellationToken);
+        //        var meal = await mealsMongoCollection.Aggregate()
+        //                .Match(filter)
+        //                .FirstOrDefaultAsync(cancellationToken);
 
-            //return new Response() { Meal = meal };
-        }
+        //        return new Response() { Meal = meal };
+        //    }
+        //}
     }
 }
