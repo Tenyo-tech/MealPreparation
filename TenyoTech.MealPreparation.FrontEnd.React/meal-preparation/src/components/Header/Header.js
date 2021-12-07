@@ -1,11 +1,11 @@
 const Header = () => {
     return (
         <header>
-            <h1><a class="home" href="#">GamesPlay</a></h1>
+            <h1><a class="home" href="#">Meal Preparation</a></h1>
             <nav>
-                <a href="#">All games</a>
+                <a href="#">All Meals</a>
                 <div id="user">
-                    <a href="#">Create Game</a>
+                    <a href="create">Create Meal</a>
                     <a href="#">Logout</a>
                 </div>
                 <div id="guest">
