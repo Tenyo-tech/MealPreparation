@@ -10,6 +10,8 @@ namespace TenyoTech.MealPreparation.Import.Models.Meals
 
         public string Title { get; set; }
 
+        public string ImageUrl { get; set; }
+
         public ICollection<CreateProduct> Products { get; set; }
 
         public string Recipe { get; set; }

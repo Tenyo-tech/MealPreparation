@@ -26,6 +26,7 @@ namespace TenyoTech.MealPreparation.commands.Meals.Create
             {
                 AuthorId = request.AuthorId,
                 Title = request.Title,
+                ImageUrl = request.ImageUrl,
                 Products = request.Products,
                 Recipe = request.Recipe,
                 NutritionalComposition = request.NutritionalComposition,

@@ -20,6 +20,8 @@ namespace TenyoTech.MealPreparation.Data.Models
 
         public string Title { get; set; }
 
+        public string ImageUrl { get; set; }
+
         public ICollection<Product> Products { get; set; }
 
         public string Recipe { get; set; }
